@@ -10,8 +10,12 @@ public class Application {
 
     public static void main(String[] args) {
         RestTemplate restTemplate = new RestTemplate();
-        String temp = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", String.class);
-        System.out.println(temp);
+        User me = restTemplate.getForObject("https://www.beeminder.com/api/v1/users/me?auth_token=Z4yM7aLK9aiN8tLPhDeu", User.class);
+        System.out.println(me);
+
+
+
+
     }
 
 }
